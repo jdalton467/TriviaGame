@@ -5,12 +5,26 @@ body{
 
 
 .container{
-	width: 600px;
-	height: 600px;
+	width: 400px;
+	height: 800px;
 	background-color: #c2b555;
-	margin:auto;
+	/*margin:auto;*/
+	/*margin-top: 400px;*/
 	text-align: center;
-	/*opacity: 0.5;*/
+	opacity: 0.8;
+	/*position: fixed;*/
 }
 
+#firstrow{
+	border:dotted black;
+	height:100px;
+}
+#secondrow{
+	border: dotted black;
+	height: 400px;
+}
+#thirdrow{
+	border: dotted black;
+	height:100px;
+}
 
