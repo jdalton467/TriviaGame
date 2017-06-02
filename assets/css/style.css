@@ -6,25 +6,25 @@ body{
 
 .container{
 	width: 400px;
-	height: 800px;
+	height: 1000px;
 	background-color: #c2b555;
 	/*margin:auto;*/
 	/*margin-top: 400px;*/
 	text-align: center;
-	opacity: 0.8;
+	opacity: 0.9;
 	/*position: fixed;*/
 }
 
 #firstrow{
-	border:dotted black;
+	/*border:dotted black;*/
 	height:100px;
 }
 #secondrow{
-	border: dotted black;
-	height: 400px;
+	/*border: dotted black;*/
+	height: 800px;
 }
 #thirdrow{
-	border: dotted black;
+	/*border: dotted black;*/
 	height:100px;
 }
 
