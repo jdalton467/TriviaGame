@@ -1,3 +1,6 @@
+$("input").on('click', function(){
+	console.log(this)
+});
 
 var questions = {
     q1:"Which actor is known for using a technique known as 'method-acting' while filming a movie?",
@@ -38,7 +41,15 @@ function stop(){
 
 }
 
+// var clicker = function(){
+	// $(document).on('click','input[name="question + i"]',function(){
+	// var value = document.querySelector('input[name = "question + i"]:checked').value;
+	// alert(value);
+	// })
+//}
 
+
+//}
 
 
 
@@ -46,72 +57,145 @@ function stop(){
 
 $("#start").on("click",function(){
 
-	
+$(document).on('click','input[name="question1"]',function(){
+	var value = document.querySelector('input[name = "question1"]:checked').value;
+	alert(value);
+	if(value == "Daniel Day-Lewis"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
 
-
+})
 
 	$("#secondrow").html("<h3>" + questions.q1 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="Ben Affleck"\ checked="checked"\ > Ben Affleck\
-    <input type="radio"\ name="choice"\ value="Steve Martin"\ checked="checked"> Steve Martin\
-    <input type="radio"\ name="choice"\ value="Daniel Day-Lewis">\ Daniel Day-Lewis\
-    <input type="radio"\ name="choice"\ value="Larry the Cable Guy">\ Larry the Cable Guy\
+	<input type="radio"\ name="question1"\ value="Ben Affleck"\ > Ben Affleck\
+    <input type="radio"\ name="question1"\ value="Steve Martin"\ > Steve Martin\
+    <input type="radio"\ name="question1"\ value="Daniel Day-Lewis">\ Daniel Day-Lewis\
+    <input type="radio"\ name="question1"\ value="Larry the Cable Guy">\ Larry the Cable Guy\
     </form>');
+
+    
+   	
+$(document).on('click','input[name="question2"]',function(){
+	var value = document.querySelector('input[name = "question2"]:checked').value;
+	alert(value);
+	alert(value);
+	if(value == "Meryl Streep"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+})
+
    	$("#secondrow").append("<h3>" + questions.q2 + "</h3>");
    	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="Reese Witherspoon"\ > Reese Witherspoon\
-    <input type="radio"\ name="choice"\ value="Jennifer Lawrence"\ > Jennifer Lawrence\
-    <input type="radio"\ name="choice"\ value="Anne Hathaway">\ Anne Hathaway\
-    <input type="radio"\ name="choice"\ value="Meryl Streep">\ Meryl Streep\
+	<input type="radio"\ name="question2"\ value="Reese Witherspoon"\ > Reese Witherspoon\
+    <input type="radio"\ name="question2"\ value="Jennifer Lawrence"\ > Jennifer Lawrence\
+    <input type="radio"\ name="question2"\ value="Anne Hathaway">\ Anne Hathaway\
+    <input type="radio"\ name="question2"\ value="Meryl Streep">\ Meryl Streep\
     </form>');
+
+$(document).on('click','input[name="question3"]',function(){
+	var value = document.querySelector('input[name = "question3"]:checked').value;
+	alert(value);
+	alert(value);
+	if(value == "Apocalypse Now"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+
+})
 	$("#secondrow").append("<h3>" + questions.q3 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="Star Wars"\ > Star Wars\
-    <input type="radio"\ name="choice"\ value="Apocalypse Now"\ > Apocalypse Now\
-    <input type="radio"\ name="choice"\ value="Back to the Future">\ Back to the Future\
-    <input type="radio"\ name="choice"\ value="A Very Harold and Kumar 3D Christmas">\ A Very Harold and Kumar 3D Christmas\
+	<input type="radio"\ name="question3"\ value="Star Wars"\ > Star Wars\
+    <input type="radio"\ name="question3"\ value="Apocalypse Now"\ > Apocalypse Now\
+    <input type="radio"\ name="question3"\ value="Back to the Future">\ Back to the Future\
+    <input type="radio"\ name="question3"\ value="A Very Harold and Kumar 3D Christmas">\ A Very Harold and Kumar 3D Christmas\
     </form>');
+
+ $(document).on('click','input[name="question4"]',function(){
+	var value = document.querySelector('input[name = "question4"]:checked').value;
+	alert(value);
+	if(value == "John McClane"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+	alert(value);
+
+})
 	$("#secondrow").append("<h3>" + questions.q4 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="John McClane"\ > John McClane\
-    <input type="radio"\ name="choice"\ value="Jack Bauer"\ > Jack Bauer\
-    <input type="radio"\ name="choice"\ value="Alex Jones">\ Alex Jones\
-    <input type="radio"\ name="choice"\ value="Dwayne Johnson">\ Dwayne Johnson\
+	<input type="radio"\ name="question4"\ value="John McClane"\ > John McClane\
+    <input type="radio"\ name="question4"\ value="Jack Bauer"\ > Jack Bauer\
+    <input type="radio"\ name="question4"\ value="Alex Jones">\ Alex Jones\
+    <input type="radio"\ name="question4"\ value="Dwayne Johnson">\ Dwayne Johnson\
     </form>');
+
+   $(document).on('click','input[name="question5"]',function(){
+	var value = document.querySelector('input[name = "question5"]:checked').value;
+	alert(value);
+	alert(value);
+	if(value == "Leonardo DiCaprio"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+
+})
 	$("#secondrow").append("<h3>" + questions.q5 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="Christian Bale"\ > Christian Bale\
-    <input type="radio"\ name="choice"\ value="Edward Norton"\ > Edward Norton\
-    <input type="radio"\ name="choice"\ value="Johnny Depp">\ Johnny Depp\
-    <input type="radio"\ name="choice"\ value="Leonardo DiCaprio">\ Leonardo DiCaprio\
+	<input type="radio"\ name="question5"\ value="Christian Bale"\ > Christian Bale\
+    <input type="radio"\ name="question5"\ value="Edward Norton"\ > Edward Norton\
+    <input type="radio"\ name="question5"\ value="Johnny Depp">\ Johnny Depp\
+    <input type="radio"\ name="question5"\ value="Leonardo DiCaprio">\ Leonardo DiCaprio\
     </form>');
+
+ $(document).on('click','input[name="question6"]',function(){
+	var value = document.querySelector('input[name = "question6"]:checked').value;
+	alert(value);
+	alert(value);
+	if(value == "Jack Nicolson"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+
+})
 	$("#secondrow").append("<h3>" + questions.q6 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="Jack Nicolson"\ > Jack Nicolson\
-    <input type="radio"\ name="choice"\ value="Danny Devito"\ > Danny Devito\
-    <input type="radio"\ name="choice"\ value="Martin Sheen">\ Martin Sheen\
-    <input type="radio"\ name="choice"\ value="Marlon Brando">\ Marlin Brando\
+	<input type="radio"\ name="question6"\ value="Jack Nicolson"\ > Jack Nicolson\
+    <input type="radio"\ name="question6"\ value="Danny Devito"\ > Danny Devito\
+    <input type="radio"\ name="question6"\ value="Martin Sheen">\ Martin Sheen\
+    <input type="radio"\ name="question6"\ value="Marlon Brando">\ Marlin Brando\
     </form>');
+
+ $(document).on('click','input[name="question7"]',function(){
+	var value = document.querySelector('input[name = "question7"]:checked').value;
+	alert(value);
+	alert(value);
+	if(value == "1977"){
+		alert("correct");
+	}else{
+		alert("incorrect");
+	}
+
+})
 	$("#secondrow").append("<h3>" + questions.q7 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="choice"\ value="1976"\ onclick = "myFunction()" \ > 1976\
-    <input type="radio"\ name="choice"\ value="1977"\ > 1977\
-    <input type="radio"\ name="choice"\ value="1978">\ 1978\
-    <input type="radio"\ name="choice"\ value="1979">\ 1979\
+	<input type="radio"\ name="question7"\ value="1976"\ onclick="myFunction();" \ > 1976\
+    <input type="radio"\ name="question7"\ value="1977"\ > 1977\
+    <input type="radio"\ name="question7"\ value="1978">\ 1978\
+    <input type="radio"\ name="question7"\ value="1979">\ 1979\
     </form>');
 
 
-function myFunction(){
-	var choice = document.form[0];
-	var i;
-	for(i=0; i <choice.length; i++){
-		if(choice[i].checked){
-			console.log("success");
-		}
-	}
-}
 
 
+	
 });
 
 
