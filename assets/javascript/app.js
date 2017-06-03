@@ -18,7 +18,7 @@ var questions = {
 
 $("#start").on("click", run);
 
-var number = 100;//counter is counting down 60 seconds
+var number = 30;//counter is counting down 60 seconds
 var intervalId;//setting intervalId variable for clearing the interval later on
 
 
@@ -33,6 +33,8 @@ function decrement(){
 
 	if(number === 0){
 		stop();
+		$("#gameDisplay").append(correct);
+		$("#gameDisplay").append(incorrect);
 	}
 }
  	
@@ -51,7 +53,8 @@ function stop(){
 
 //}
 
-
+var correct = 0;
+var incorrect = 0;
 
 
 
@@ -61,10 +64,14 @@ $(document).on('click','input[name="question1"]',function(){
 	var value = document.querySelector('input[name = "question1"]:checked').value;
 	alert(value);
 	if(value == "Daniel Day-Lewis"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
+		
+	
 
 })
 
@@ -83,10 +90,12 @@ $(document).on('click','input[name="question2"]',function(){
 	alert(value);
 	alert(value);
 	if(value == "Meryl Streep"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
 })
 
    	$("#secondrow").append("<h3>" + questions.q2 + "</h3>");
@@ -102,10 +111,12 @@ $(document).on('click','input[name="question3"]',function(){
 	alert(value);
 	alert(value);
 	if(value == "Apocalypse Now"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
 
 })
 	$("#secondrow").append("<h3>" + questions.q3 + "</h3>");
@@ -120,11 +131,12 @@ $(document).on('click','input[name="question3"]',function(){
 	var value = document.querySelector('input[name = "question4"]:checked').value;
 	alert(value);
 	if(value == "John McClane"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
-	alert(value);
+		incorrect++;
+		console.log(incorrect);
+		}
 
 })
 	$("#secondrow").append("<h3>" + questions.q4 + "</h3>");
@@ -140,10 +152,12 @@ $(document).on('click','input[name="question3"]',function(){
 	alert(value);
 	alert(value);
 	if(value == "Leonardo DiCaprio"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
 
 })
 	$("#secondrow").append("<h3>" + questions.q5 + "</h3>");
@@ -159,10 +173,12 @@ $(document).on('click','input[name="question3"]',function(){
 	alert(value);
 	alert(value);
 	if(value == "Jack Nicolson"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
 
 })
 	$("#secondrow").append("<h3>" + questions.q6 + "</h3>");
@@ -178,10 +194,12 @@ $(document).on('click','input[name="question3"]',function(){
 	alert(value);
 	alert(value);
 	if(value == "1977"){
-		alert("correct");
+		correct++;
+		console.log(correct);
 	}else{
-		alert("incorrect");
-	}
+		incorrect++;
+		console.log(incorrect);
+		}
 
 })
 	$("#secondrow").append("<h3>" + questions.q7 + "</h3>");
@@ -192,32 +210,12 @@ $(document).on('click','input[name="question3"]',function(){
     <input type="radio"\ name="question7"\ value="1979">\ 1979\
     </form>');
 
-
-
-
-	
 });
 
 
 
 
 
-
-
-
-
-//create a function which checks for the correct values of the choices selected
-//it will then count them and tally them based on what is
-
-
-
-
-//if the player choice is equal to the value of the correct answer then correct counter will go 
-// up
-
-//else, then the the incorrect counter will go up
-
-// at when the game ends the results will replace the questions on the
 
 
  
