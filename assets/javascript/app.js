@@ -33,8 +33,8 @@ function decrement(){
 
 	if(number === 0){
 		stop();
-		$("#gameDisplay").append(correct);
-		$("#gameDisplay").append(incorrect);
+		$("#gameDisplay").append(correctTotal);
+		$("#gameDisplay").append(incorrectTotal);
 	}
 }
  	
@@ -53,24 +53,30 @@ function stop(){
 
 //}
 
-var correct = 0;
-var incorrect = 0;
-
+var correct = false;
+var incorrect = false;
+var correctTotal = 0;
+var incorrectTotal = 0;
 
 
 $("#start").on("click",function(){
 
 $(document).on('click','input[name="question1"]',function(){
 	var value = document.querySelector('input[name = "question1"]:checked').value;
-	alert(value);
+	// alert(value);
 	if(value == "Daniel Day-Lewis"){
-		correct++;
-		console.log(correct);
-	}else{
-		incorrect++;
-		console.log(incorrect);
-		}
+		correct=true;
+		if(correct){
+			correctCounter1=1
+			console.log(correctCounter1);		}
 		
+	}else{
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter1=1;
+				console.log(incorrectCounter1);
+			}
+		}
 	
 
 })
@@ -87,14 +93,21 @@ $(document).on('click','input[name="question1"]',function(){
    	
 $(document).on('click','input[name="question2"]',function(){
 	var value = document.querySelector('input[name = "question2"]:checked').value;
-	alert(value);
-	alert(value);
+	// alert(value);
+	// alert(value);
 	if(value == "Meryl Streep"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter2=1;
+			console.log(correctCounter2);
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter2=1;
+				console.log(incorrectCounter2);
+			}
 		}
 })
 
@@ -108,14 +121,19 @@ $(document).on('click','input[name="question2"]',function(){
 
 $(document).on('click','input[name="question3"]',function(){
 	var value = document.querySelector('input[name = "question3"]:checked').value;
-	alert(value);
-	alert(value);
+	// alert(value);
+	// alert(value);
 	if(value == "Apocalypse Now"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter3=1;
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter3=1;
+			}
 		}
 
 })
@@ -129,13 +147,18 @@ $(document).on('click','input[name="question3"]',function(){
 
  $(document).on('click','input[name="question4"]',function(){
 	var value = document.querySelector('input[name = "question4"]:checked').value;
-	alert(value);
+	// alert(value);
 	if(value == "John McClane"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter4=1;
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter4=1;
+			}
 		}
 
 })
@@ -149,14 +172,19 @@ $(document).on('click','input[name="question3"]',function(){
 
    $(document).on('click','input[name="question5"]',function(){
 	var value = document.querySelector('input[name = "question5"]:checked').value;
-	alert(value);
-	alert(value);
+	// alert(value);
+	// alert(value);
 	if(value == "Leonardo DiCaprio"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter5=1;
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter5=1;
+			}
 		}
 
 })
@@ -170,14 +198,19 @@ $(document).on('click','input[name="question3"]',function(){
 
  $(document).on('click','input[name="question6"]',function(){
 	var value = document.querySelector('input[name = "question6"]:checked').value;
-	alert(value);
-	alert(value);
+	// alert(value);
+	// alert(value);
 	if(value == "Jack Nicolson"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter6=1;
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter6=1;
+			}
 		}
 
 })
@@ -191,14 +224,19 @@ $(document).on('click','input[name="question3"]',function(){
 
  $(document).on('click','input[name="question7"]',function(){
 	var value = document.querySelector('input[name = "question7"]:checked').value;
-	alert(value);
-	alert(value);
+	// alert(value);
+	// alert(value);
 	if(value == "1977"){
-		correct++;
-		console.log(correct);
+		correct=true;
+		if(correct){
+			correctCounter7=1;
+		}
+		
 	}else{
-		incorrect++;
-		console.log(incorrect);
+		incorrect = true;
+			if(incorrect){
+				incorrectCounter7=1;
+			}
 		}
 
 })
@@ -213,10 +251,8 @@ $(document).on('click','input[name="question3"]',function(){
 });
 
 
-
-
-
-
+correctTotal = correctCounter1+correctCounter2;
+console.log(correctTotal);
 
  
 
