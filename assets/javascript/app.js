@@ -55,26 +55,35 @@ var correctCounter = 0;
 var incorrectCounter = 0;
 var correctTotal = 0;
 var incorrectTotal = 0;
+var selected = false;
+
 
 
 $("#start").on("click",function(){
 
 $(document).on('click','input[name="question1"]',function(){
 	var value = document.querySelector('input[name = "question1"]:checked').value;
-	// alert(value);
+	
 	if(value == "Daniel Day-Lewis"){
-		correct=true;
-		if(correct){
+		correct = true;
+		if(selected == false){
+			if(correct){
 			correctCounter=1;
+			incorrectCounter = 0;
 			correctTotal = correctTotal + correctCounter;
+			selected = true;
 			console.log(correctTotal);
-					}
+				}
+		}
+		
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+			if(selected == false){
 				incorrectCounter=1;
+				correctCounter = 0;
 				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
 				console.log(incorrectTotal);
 			}
 		}
@@ -84,9 +93,9 @@ $(document).on('click','input[name="question1"]',function(){
 
 	$("#secondrow").html("<h3>" + questions.q1 + "</h3>");
 	$("#secondrow").append('<form>\
-	<input type="radio"\ name="question1"\ value="Ben Affleck"\ > Ben Affleck\
-    <input type="radio"\ name="question1"\ value="Steve Martin"\ > Steve Martin\
-    <input type="radio"\ name="question1"\ value="Daniel Day-Lewis">\ Daniel Day-Lewis\
+	<input type="radio"\ name="question1"\ value=""\ > Ben Affleck\
+    <input type="radio"\ name="question1"\ value=""\ > Steve Martin\
+    <input type="radio"\ name="question1"\ value="">\ Daniel Day-Lewis\
     <input type="radio"\ name="question1"\ value="Larry the Cable Guy">\ Larry the Cable Guy\
     </form>');
 
@@ -100,6 +109,7 @@ $(document).on('click','input[name="question2"]',function(){
 		correct=true;
 		if(correct){
 			correctCounter=1;
+			incorrectCounter = 0;
 			correctTotal = correctTotal + correctCounter;
 			console.log(correctTotal);
 			}
@@ -108,6 +118,7 @@ $(document).on('click','input[name="question2"]',function(){
 		incorrect = true;
 			if(incorrect){
 				incorrectCounter=1;
+				correctCounter = 0;
 				incorrectTotal = incorrectTotal + incorrectCounter;
 				console.log(incorrectTotal);
 			}
@@ -129,16 +140,24 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "Apocalypse Now"){
 		correct=true;
 		if(correct){
-			correctCounter = 1
+			correctCounter++;
+			return (correctCounter < 1);
+			// correct = false;
 			correctTotal = correctTotal + correctCounter;
+			
 			console.log(correctTotal);
+			
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter=1;
+				incorrectCounter++;
+				return (incorrectCounter < 1);
+				// incorrect = false;
+				// correctCounter = 0;
 				incorrectTotal = incorrectTotal + incorrectCounter;
+				
 				console.log(incorrectTotal);
 			}
 		}
