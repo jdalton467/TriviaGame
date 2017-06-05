@@ -43,18 +43,16 @@ function stop(){
 
 }
 
-// var clicker = function(){
-	// $(document).on('click','input[name="question + i"]',function(){
-	// var value = document.querySelector('input[name = "question + i"]:checked').value;
-	// alert(value);
-	// })
-//}
+for(i = 0;i<8;i++){
+	var correctCounteri=0;
+}
 
 
-//}
 
 var correct = false;
 var incorrect = false;
+var correctCounter = 0;
+var incorrectCounter = 0;
 var correctTotal = 0;
 var incorrectTotal = 0;
 
@@ -67,14 +65,17 @@ $(document).on('click','input[name="question1"]',function(){
 	if(value == "Daniel Day-Lewis"){
 		correct=true;
 		if(correct){
-			correctCounter1=1
-			console.log(correctCounter1);		}
+			correctCounter=1;
+			correctTotal = correctTotal + correctCounter;
+			console.log(correctTotal);
+					}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter1=1;
-				console.log(incorrectCounter1);
+				incorrectCounter=1;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				console.log(incorrectTotal);
 			}
 		}
 	
@@ -98,15 +99,17 @@ $(document).on('click','input[name="question2"]',function(){
 	if(value == "Meryl Streep"){
 		correct=true;
 		if(correct){
-			correctCounter2=1;
-			console.log(correctCounter2);
-		}
+			correctCounter=1;
+			correctTotal = correctTotal + correctCounter;
+			console.log(correctTotal);
+			}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter2=1;
-				console.log(incorrectCounter2);
+				incorrectCounter=1;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				console.log(incorrectTotal);
 			}
 		}
 })
@@ -126,13 +129,17 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "Apocalypse Now"){
 		correct=true;
 		if(correct){
-			correctCounter3=1;
+			correctCounter = 1
+			correctTotal = correctTotal + correctCounter;
+			console.log(correctTotal);
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter3=1;
+				incorrectCounter=1;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				console.log(incorrectTotal);
 			}
 		}
 
@@ -151,13 +158,13 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "John McClane"){
 		correct=true;
 		if(correct){
-			correctCounter4=1;
+			correctCounter=1;
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter4=1;
+				incorrectCounter=1;
 			}
 		}
 
@@ -177,13 +184,13 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "Leonardo DiCaprio"){
 		correct=true;
 		if(correct){
-			correctCounter5=1;
+			correctCounter=1;
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter5=1;
+				incorrectCounter=1;
 			}
 		}
 
@@ -203,13 +210,13 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "Jack Nicolson"){
 		correct=true;
 		if(correct){
-			correctCounter6=1;
+			correctCounter=1;
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter6=1;
+				incorrectCounter=1;
 			}
 		}
 
@@ -229,13 +236,13 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "1977"){
 		correct=true;
 		if(correct){
-			correctCounter7=1;
+			correctCounter=1;
 		}
 		
 	}else{
 		incorrect = true;
 			if(incorrect){
-				incorrectCounter7=1;
+				incorrectCounter=1;
 			}
 		}
 
@@ -251,8 +258,8 @@ $(document).on('click','input[name="question3"]',function(){
 });
 
 
-correctTotal = correctCounter1+correctCounter2;
-console.log(correctTotal);
+// correctTotal = correctCounter1+correctCounter2;
+// console.log(correctTotal);
 
  
 
