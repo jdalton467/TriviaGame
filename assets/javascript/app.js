@@ -33,8 +33,8 @@ function decrement(){
 
 	if(number === 0){
 		stop();
-		$("#gameDisplay").append(correctTotal);
-		$("#gameDisplay").append(incorrectTotal);
+		$("#gameDisplay").append("correct :" + " "+correctTotal);
+		$("#gameDisplay").append("incorrect :" + " "+incorrectTotal);
 	}
 }
  	
@@ -107,19 +107,23 @@ $(document).on('click','input[name="question2"]',function(){
 	// alert(value);
 	if(value == "Meryl Streep"){
 		correct=true;
-		if(correct){
+		if(selected == false){
+			if(correct){
 			correctCounter=1;
 			incorrectCounter = 0;
 			correctTotal = correctTotal + correctCounter;
+			selected = true;
 			console.log(correctTotal);
-			}
+				}
+		}
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+			if(selected == false){
 				incorrectCounter=1;
 				correctCounter = 0;
 				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
 				console.log(incorrectTotal);
 			}
 		}
@@ -140,24 +144,20 @@ $(document).on('click','input[name="question3"]',function(){
 	if(value == "Apocalypse Now"){
 		correct=true;
 		if(correct){
-			correctCounter++;
-			return (correctCounter < 1);
-			// correct = false;
+			correctCounter=1;
+			incorrectCounter = 0;
 			correctTotal = correctTotal + correctCounter;
-			
+			selected = true;
 			console.log(correctTotal);
-			
-		}
+				}
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
-				incorrectCounter++;
-				return (incorrectCounter < 1);
-				// incorrect = false;
-				// correctCounter = 0;
+			if(selected == false){
+				incorrectCounter=1;
+				correctCounter = 0;
 				incorrectTotal = incorrectTotal + incorrectCounter;
-				
+				selected = true;
 				console.log(incorrectTotal);
 			}
 		}
@@ -175,15 +175,23 @@ $(document).on('click','input[name="question3"]',function(){
 	var value = document.querySelector('input[name = "question4"]:checked').value;
 	// alert(value);
 	if(value == "John McClane"){
-		correct=true;
+		correct = true;
 		if(correct){
 			correctCounter=1;
-		}
+			incorrectCounter = 0;
+			correctTotal = correctTotal + correctCounter;
+			selected = true;
+			console.log(correctTotal);
+				}
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+		if(selected == false){
 				incorrectCounter=1;
+				correctCounter = 0;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
+				console.log(incorrectTotal);
 			}
 		}
 
@@ -201,15 +209,24 @@ $(document).on('click','input[name="question3"]',function(){
 	// alert(value);
 	// alert(value);
 	if(value == "Leonardo DiCaprio"){
-		correct=true;
+		correct = true;
 		if(correct){
 			correctCounter=1;
-		}
+			incorrectCounter = 0;
+			correctTotal = correctTotal + correctCounter;
+			selected = true;
+			console.log(correctTotal);
+				}
+		
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+		if(selected == false){
 				incorrectCounter=1;
+				correctCounter = 0;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
+				console.log(incorrectTotal);
 			}
 		}
 
@@ -227,15 +244,23 @@ $(document).on('click','input[name="question3"]',function(){
 	// alert(value);
 	// alert(value);
 	if(value == "Jack Nicolson"){
-		correct=true;
+		correct = true;
 		if(correct){
 			correctCounter=1;
-		}
+			incorrectCounter = 0;
+			correctTotal = correctTotal + correctCounter;
+			selected = true;
+			console.log(correctTotal);
+				}
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+		if(selected == false){
 				incorrectCounter=1;
+				correctCounter = 0;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
+				console.log(incorrectTotal);
 			}
 		}
 
@@ -253,15 +278,23 @@ $(document).on('click','input[name="question3"]',function(){
 	// alert(value);
 	// alert(value);
 	if(value == "1977"){
-		correct=true;
+		correct = true;
 		if(correct){
 			correctCounter=1;
-		}
+			incorrectCounter = 0;
+			correctTotal = correctTotal + correctCounter;
+			selected = true;
+			console.log(correctTotal);
+				}
 		
 	}else{
 		incorrect = true;
-			if(incorrect){
+		if(selected == false){
 				incorrectCounter=1;
+				correctCounter = 0;
+				incorrectTotal = incorrectTotal + incorrectCounter;
+				selected = true;
+				console.log(incorrectTotal);
 			}
 		}
 
