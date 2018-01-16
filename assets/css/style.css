@@ -1,0 +1,28 @@
+
+body{
+	position: relative;
+}
+
+
+
+
+#TriviaWrapper{
+	display: none;
+	margin: auto;
+	width: 800px;
+}
+
+#timer{
+	text-align: center;
+}
+
+#title{
+	text-align: center;
+}
+
+#start{
+	width: 50px;
+	margin: auto;
+	text-align: center;
+	display: block;
+}

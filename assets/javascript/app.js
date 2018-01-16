@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
     start.addEventListener('click', function(event) {
         startTimer();
         this.style.display = "none";
+        setTimeout(() => document.getElementById("TriviaWrapper").style.display="block", 1000);
     })
 
     function startTimer() {
