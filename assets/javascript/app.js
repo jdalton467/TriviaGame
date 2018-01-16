@@ -16,10 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
         startTimer();
         this.style.display = "none";
         setTimeout(() => document.getElementById("TriviaWrapper").style.display="block", 1000);
+        setTimeout(() => document.getElementById("timer").style.visibility="visible", 1000);
     })
 
     function startTimer() {
-        intervalId = setInterval(decrement, 1000);
+        intervalId = setInterval(decrement, 30);
     };
 
     function decrement() {

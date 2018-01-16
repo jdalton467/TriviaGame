@@ -15,6 +15,17 @@ body{
 
 #timer{
 	text-align: center;
+	border:  #06DEE6 solid 4px;
+	background-color: #FF215F;
+	width: 200px;
+	padding: 10px;
+	color: white;
+	visibility: hidden;
+}
+
+#timer-wrapper{
+	width: 200px;
+	margin:auto;
 }
 
 #title{
