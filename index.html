@@ -1,35 +1,61 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<script
-		src="https://code.jquery.com/jquery-3.2.1.min.js"
-		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		crossorigin="anonymous"></script>
-		<title>TriviaGame</title>
+		<title>Trivia</title>
+		<!-- <link rel="stylesheet" type="text/css" href="assets/"> -->
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12" id="gameDisplay"><h1>That Actor Did What??</h1></div>
-			</div>
-			<div class="row">
-				<div class = "col-md-12" id="gameDisplay">
-					<div class="row">
-						<div class="col-md-12" id="firstrow">
-							<div id="show-number"></div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12" id="secondrow">
-							<button id="start">Press to Play!</button>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-12" id="thirdrow"></div>
-					</div>
-				</div>
+		<div class="wrapper">
+			<h1>Golden Globes Trivia</h1>
+			<h1 id="timer"></h1>
+			<div class="Trivia Wrapper">
+				<form>
+					<h3>Which actor is known for using a technique known as 'method-acting' while filming a movie?</h3>
+					<input type="radio" name="1" value="Ben Affleck">Ben Affleck
+					<input type="radio" name="1" value="Steve Martin">Steve Martin
+					<input type="radio" name="1" value="Daniel Day-Lewis">Daniel Day-Lewis
+					<input type="radio" name="1" value="Larry the Cable Guy">Larry the Cable Guy
+					<br><br>
+					<h3>Which actress has been nominated for the Golden Globe over 30 times?</h3>
+					<input type="radio" name="2" value="Reese Witherspoon"> Reese Witherspoon
+					<input type="radio" name="2" value="Jennifer Lawrence">Jennifer Lawrence
+					<input type="radio" name="2" value="Anne Hathaway">Anne Hathaway
+					<input type="radio" name="2" value="Meryl Streep">Meryl Streep
+					<br><br>
+					<h3>Which one of these four films was the costliest and most time consuming to make?</h3>
+					<input type="radio" name="3" value="Star Wars">Star Wars
+					<input type="radio" name="3" value="Apocalypse Now">
+					Apocalypse Now
+					<input type="radio" name="3" value="Back to the Future"> Back to the Future
+					<input type="radio" name="3" value="A Very Harold and Kumar 3D Christmas">A Very Harold and Kumar 3D Christmas
+					<br><br>
+					<h3>What is the name of Bruce Willis's character in the Die Hard Series?</h3>
+					<input type="radio" name="4" value="John McClane">John McClane
+					<input type="radio" name="4" value="Jack Bauer">
+					Jack Bauer
+					<input type="radio" name="4" value="Alex Jones">Alex Jones
+					<input type="radio" name="4" value="Dwayne Johnson">Dwayne Johnson
+					<br><br>
+					<h3>Since a young age, this actor starred in major films. However, he did not win his first oscar until the age of 41.</h3>
+					<input type="radio" name="5" value="Christian Bale">Christian Bale
+					<input type="radio" name="5" value="Edward Nortonr">
+					Edward Norton
+					<input type="radio" name="5" value="Johnny Depp">Johnny Depp
+					<input type="radio" name="5" value="Leonardo DiCaprio">Leonardo DiCaprio
+					<br><br>
+					<h3>This actor played the lead role in 'One Flew Over the Cuckoo's Nest'.</h3>
+					<input type="radio" name="6" value="Jack Nicolson">Jack Nicolson
+					<input type="radio" name="6" value="Danny Devito">
+					Danny Devito
+					<input type="radio" name="6" value="Paul Newman">Paul Newman
+					<input type="radio" name="6" value="Marlon Brando">Marlon Brando
+					<br><br>
+					<h3>What year was "Star Wars: The Empire Strikes Back", released?</h3>
+					<input type="radio" name="7" value="1968">1968
+					<input type="radio" name="7" value="1977">1977
+					<input type="radio" name="7" value="1980">1980
+					<input type="radio" name="7" value="1999">1999
+				</form>
 			</div>
 		</div>
 	</body>
