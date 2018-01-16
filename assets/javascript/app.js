@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //loop through the array of inputs and add eventlisteners to each button
     let answersArr = []; //array that will be populated with the right answers
     let nameArr = [];
-    let number = 60;
+    let seconds = 60;
+    let minutes = 1;
     let intervalId;
     let correctAnswers = 0;
 
@@ -15,13 +16,20 @@ document.addEventListener("DOMContentLoaded", function() {
     })();
 
     function decrement() {
-        number--;
-        document.getElementById("timer").innerHTML = number;
-        if (number === 0) {
+        seconds--;
+        document.getElementById("timer").innerHTML = minutes + " : " + seconds;
+        if (seconds < 10) {
+            document.getElementById("timer").innerHTML = minutes + " : " + "0" + seconds;
+        }
+        if (seconds < 0 & minutes !== 0) {
+            minutes--;
+            seconds = 60;
+            decrement();
+        } else if (seconds === 0 && minutes === 0) {
             clearInterval(intervalId);
             for (let i = 0; i < answersArr.length; i++) {
                 if (answerKey.indexOf(answersArr[i]) !== -1) {
-                  correctAnswers++;
+                    correctAnswers++;
                 }
             }
             document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/7 correct!";
