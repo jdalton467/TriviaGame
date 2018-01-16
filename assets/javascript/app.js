@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     let input = document.getElementsByTagName('input');
+    let start = document.getElementById("start");
     console.log(input);
     let answerKey = ["Daniel Day-Lewis", "Meryl Streep", "Apocalypse Now", "John McClane", "Leonardo DiCaprio", "Jack Nicolson", "1980"];
     //loop through the array of inputs and add eventlisteners to each button
@@ -11,9 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
     let intervalId;
     let correctAnswers = 0;
 
-    (function startTimer() {
+    start.addEventListener('click', function(event) {
+        startTimer();
+        this.style.display = "none";
+    })
+
+    function startTimer() {
         intervalId = setInterval(decrement, 1000);
-    })();
+    };
 
     function decrement() {
         seconds--;
@@ -27,6 +33,9 @@ document.addEventListener("DOMContentLoaded", function() {
             decrement();
         } else if (seconds === 0 && minutes === 0) {
             clearInterval(intervalId);
+            for (let i = 0; i < input.length; i++) {
+                input[i].setAttribute('disabled', true);
+            }
             for (let i = 0; i < answersArr.length; i++) {
                 if (answerKey.indexOf(answersArr[i]) !== -1) {
                     correctAnswers++;
