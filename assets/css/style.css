@@ -1,7 +1,7 @@
 
 body{
 	position: relative;
-	background-color: #FFEE31;
+	background-image: url("../images/background.jpeg");
 }
 
 
@@ -11,6 +11,8 @@ body{
 	display: none;
 	margin: auto;
 	width: 800px;
+  background-color: white;
+  opacity: .9;
 }
 
 #timer{
@@ -69,3 +71,5 @@ body{
   bottom: -8px;
   left: -8px;
 }
+
+

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let input = document.getElementsByTagName('input');
     let start = document.getElementById("start");
     console.log(input);
-    let answerKey = ["Daniel Day-Lewis", "Meryl Streep", "Apocalypse Now", "John McClane", "Leonardo DiCaprio", "Jack Nicolson", "1980"];
+    let answerKey = ["Daniel Day-Lewis", "Meryl Streep", "Apocalypse Now", "John McClane", "Leonardo DiCaprio", "Jack Nicolson", "1980", "The Dark Knight", "Dr.Strangelove", "Tron"];
     //loop through the array of inputs and add eventlisteners to each button
     let answersArr = []; //array that will be populated with the right answers
     let nameArr = [];
@@ -12,19 +12,19 @@ document.addEventListener("DOMContentLoaded", function() {
     let intervalId;
     let correctAnswers = 0;
 
-    start.addEventListener('click', function(event) {
-        startTimer();
+    start.addEventListener('click', function(event) { //starts the game, makes questions and choices visible
+        startTimer(); //starts the times function
         this.style.display = "none";
         setTimeout(() => document.getElementById("TriviaWrapper").style.display="block", 1000);
         setTimeout(() => document.getElementById("timer").style.visibility="visible", 1000);
     })
 
     function startTimer() {
-        intervalId = setInterval(decrement, 30);
+        intervalId = setInterval(decrement, 1000); //decreases seconds variable every second
     };
 
     function decrement() {
-        seconds--;
+        seconds--; 
         document.getElementById("timer").innerHTML = minutes + " : " + seconds;
         if (seconds < 10) {
             document.getElementById("timer").innerHTML = minutes + " : " + "0" + seconds;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     correctAnswers++;
                 }
             }
-            document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/7 correct!";
+            document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/"+ answerKey.length + " correct!";
 
         }
 
