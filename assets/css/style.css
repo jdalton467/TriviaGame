@@ -2,14 +2,17 @@
 body{
 	position: relative;
 	background-image: url("../images/background.jpeg");
+  overflow: hidden;
 }
 
 
 #TriviaWrapper{
 	display: none;
-	margin: auto;
-	width: 800px;
-  background-color: white;
+	left: 0px;
+	width: 500%;
+  float: left;
+  /*background-color: white;*/
+  overflow-x: auto;
   opacity: .9;
 }
 
@@ -91,4 +94,19 @@ i {
 }
 
 
+.questionBox{
+  width: 3%;
+  height: 200px;
+  background-color: #ED9307;
+  border: black dotted 1px;
+  float: left;
+  clear: none;
+  margin: auto;
+  margin-left: 410px;
+  overflow: auto;
+}
 
+form{
+  width: 300%;
+  overflow-x: auto;
+}
