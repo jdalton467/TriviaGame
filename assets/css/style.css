@@ -121,7 +121,8 @@ form{
   background-color: #FF215F;
   font-size: 32px;
   color: white;
-  margin: auto;
+  left: 590px;
+  border: #06DEE6 solid 4px;
   text-align: center;
   top: 20px;
 }
