@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let input = document.getElementsByTagName('input');
     let start = document.getElementById("start");
+    let submit = document.getElementById("submit");
     console.log(input);
     let answerKey = ["Daniel Day-Lewis", "Meryl Streep", "Apocalypse Now", "John McClane", "Leonardo DiCaprio", "Jack Nicolson", "1980", "The Dark Knight", "Dr.Strangelove", "Tron"];
     //loop through the array of inputs and add eventlisteners to each button
@@ -15,16 +16,40 @@ document.addEventListener("DOMContentLoaded", function() {
     start.addEventListener('click', function(event) { //starts the game, makes questions and choices visible
         startTimer(); //starts the times function
         this.style.display = "none";
-        setTimeout(() => document.getElementById("TriviaWrapper").style.display="block", 1000);
-        setTimeout(() => document.getElementById("timer").style.visibility="visible", 1000);
+        setTimeout(() => document.getElementById("TriviaWrapper").style.display = "block", 1000);
+        setTimeout(() => document.getElementById("timer").style.visibility = "visible", 1000);
+        setTimeout(() => document.getElementById("submit").style.display = "block", 1000);
     })
+
+    submit.addEventListener('click', function(event) {
+        if(answersArr.length < answerKey.length){
+            alert("answer as many as you can!");
+        }else{
+            stop();
+        }
+    })
+
+
 
     function startTimer() {
         intervalId = setInterval(decrement, 1000); //decreases seconds variable every second
     };
 
+    function stop() {
+        clearInterval(intervalId);
+        for (let i = 0; i < input.length; i++) {
+            input[i].setAttribute('disabled', true);
+        }
+        for (let i = 0; i < answersArr.length; i++) {
+            if (answerKey.indexOf(answersArr[i]) !== -1) {
+                correctAnswers++;
+            }
+        }
+        document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/" + answerKey.length + " correct!";
+    }
+
     function decrement() {
-        seconds--; 
+        seconds--;
         document.getElementById("timer").innerHTML = minutes + " : " + seconds;
         if (seconds < 10) {
             document.getElementById("timer").innerHTML = minutes + " : " + "0" + seconds;
@@ -34,17 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
             seconds = 60;
             decrement();
         } else if (seconds === 0 && minutes === 0) {
-            clearInterval(intervalId);
-            for (let i = 0; i < input.length; i++) {
-                input[i].setAttribute('disabled', true);
-            }
-            for (let i = 0; i < answersArr.length; i++) {
-                if (answerKey.indexOf(answersArr[i]) !== -1) {
-                    correctAnswers++;
-                }
-            }
-            document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/"+ answerKey.length + " correct!";
-
+            stop();
         }
 
     }

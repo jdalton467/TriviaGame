@@ -110,3 +110,18 @@ form{
   width: 300%;
   overflow-x: auto;
 }
+
+
+#submit{
+  display: none;
+   position: relative;
+  width: 200px;
+  height: 75px;
+  border: none;
+  background-color: #FF215F;
+  font-size: 32px;
+  color: white;
+  margin: auto;
+  text-align: center;
+  top: 20px;
+}
