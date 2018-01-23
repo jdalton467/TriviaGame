@@ -19,12 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => document.getElementById("TriviaWrapper").style.display = "block", 1000);
         setTimeout(() => document.getElementById("timer").style.visibility = "visible", 1000);
         setTimeout(() => document.getElementById("submit").style.display = "block", 1000);
+        setTimeout(() => document.getElementsByClassName("left")[0].style.display = "block", 1000);
+        setTimeout(() => document.getElementsByClassName("right")[0].style.display = "block", 1000);
     })
 
     submit.addEventListener('click', function(event) {
-        if(answersArr.length < answerKey.length){
+        if (answersArr.length < answerKey.length) {
             alert("answer as many as you can!");
-        }else{
+        } else {
             stop();
         }
     })
@@ -83,4 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    document.getElementsByClassName('right')[0].addEventListener('click', function() {
+            $('#TriviaWrapper').animate( { scrollLeft: '+=650' }, 200)
+    }, false);
+
+    document.getElementsByClassName('left')[0].addEventListener('click', function() {
+            $('#TriviaWrapper').animate( { scrollLeft: '-=650' }, 200)
+    }, false);
 });

@@ -9,10 +9,10 @@ body{
 #TriviaWrapper{
 	display: none;
 	left: 0px;
-	width: 500%;
+	width: 88%;
   float: left;
   /*background-color: white;*/
-  overflow-x: auto;
+  overflow-x: hidden;
   opacity: .9;
 }
 
@@ -86,35 +86,63 @@ i {
 .right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    right: 20px;
+    transition-property: right;
+    transition-duration: .5s;
 }
+
 
 .left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    left: 20px;
+}
+
+.arrow{
+  position: absolute;
+  height: 75px;
+  width: 75px;
+  border: solid #ED9307 10px;
+  background-color: #FF215F;
+  display: none;
 }
 
 
 .questionBox{
-  width: 3%;
+  width: 610px;
   height: 200px;
   background-color: #ED9307;
   border: black dotted 1px;
   float: left;
   clear: none;
   margin: auto;
-  margin-left: 410px;
+  left: 0px;
+  margin-left: 25px;
   overflow: auto;
+  padding: 10px;
+  text-align: center;
+
+     transition:        margin-left 0.5s ease;
+    -moz-transition:    margin-left 0.5s ease;
+    -ms-transition:     margin-left 0.5s ease;
+    -o-transition:      margin-left 0.5s ease;
+    -webkit-transition: margin-left 0.5s ease;
 }
 
+#key{
+  margin-left: 375px;
+}
+
+
 form{
-  width: 300%;
-  overflow-x: auto;
+  width: 600%;
+  /*overflow-x: auto;*/
 }
 
 
 #submit{
   display: none;
-   position: relative;
+  position: relative;
   width: 200px;
   height: 75px;
   border: none;
