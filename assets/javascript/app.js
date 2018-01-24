@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
         clearInterval(intervalId);
         for (let i = 0; i < input.length; i++) {
             input[i].setAttribute('disabled', true);
+            document.getElementById('submit').setAttribute('disabled', true);
         }
         for (let i = 0; i < answersArr.length; i++) {
             if (answerKey.indexOf(answersArr[i]) !== -1) {

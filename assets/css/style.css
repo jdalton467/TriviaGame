@@ -21,9 +21,11 @@ body{
 	border:  #06DEE6 solid 4px;
 	background-color: #FF215F;
 	width: 200px;
-	padding: 10px;
+	padding: 20px;
 	color: white;
+  font-size: 32px;
 	visibility: hidden;
+  margin: auto;
 }
 
 #timer-wrapper{
@@ -33,6 +35,10 @@ body{
 
 #title{
 	text-align: center;
+  color: #F3990C;
+  font-family: 'Monoton', cursive;
+  font-size: 52px;
+
 }
 
 
@@ -49,7 +55,7 @@ body{
   background-color: #FF215F;
   font-size: 32px;
   color: white;
-  top: 200px;
+  top: 100px;
   margin: auto;
   text-align: center;
 }
@@ -105,14 +111,15 @@ i {
   border: solid #ED9307 10px;
   background-color: #FF215F;
   display: none;
+  top: 90%;
 }
 
 
 .questionBox{
   width: 610px;
   height: 200px;
-  background-color: #ED9307;
-  border: black dotted 1px;
+  background-color: #F4281E;
+  border: black dashed 10px;
   float: left;
   clear: none;
   margin: auto;
