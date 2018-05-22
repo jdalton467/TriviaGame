@@ -2,18 +2,22 @@
 body{
 	position: relative;
 	background-image: url("../images/background.jpeg");
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
+.correct{
+  color: green;
+}
 
 #TriviaWrapper{
 	display: none;
 	left: 0px;
 	width: 88%;
-  float: left;
+  /*float: left;*/
   /*background-color: white;*/
-  overflow-x: hidden;
+  /*overflow-x: hidden;*/
   opacity: .9;
+  margin:auto;
 }
 
 #timer{
@@ -45,8 +49,6 @@ body{
 #start {
   display: block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
   position: relative;
   width: 200px;
@@ -72,12 +74,12 @@ body{
   -webkit-transition-property: top, right, bottom, left;
   transition-property: top, right, bottom, left;
 }
-#start:hover:before, #start:focus:before, #start:active:before {
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-  left: -8px;
-}
+/*#start:hover:before, #start:focus:before, #start:active:before {*/
+  /*top: -8px;*/
+  /*right: -8px;*/
+  /*bottom: -8px;*/
+  /*left: -8px;*/
+/*}*/
 
 
 i {
@@ -118,14 +120,14 @@ i {
 .questionBox{
   width: 610px;
   height: 200px;
-  background-color: #F4281E;
+  background-color: #E1FC83;
   border: black dashed 10px;
-  float: left;
+  /*float: left;*/
   clear: none;
   margin: auto;
   left: 0px;
-  margin-left: 25px;
-  overflow: auto;
+  /*margin-left: 25px;*/
+  /*overflow: auto;*/
   padding: 10px;
   text-align: center;
 
@@ -137,7 +139,7 @@ i {
 }
 
 #key{
-  margin-left: 375px;
+  /*margin-left: 375px;*/
 }
 
 
@@ -149,10 +151,11 @@ form{
 
 #submit{
   display: none;
-  position: relative;
+  /*position: relative;*/
   width: 200px;
   height: 75px;
   border: none;
+  margin: auto;
   background-color: #FF215F;
   font-size: 32px;
   color: white;

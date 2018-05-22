@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     //loop through the array of inputs and add eventlisteners to each button
     let answersArr = []; //array that will be populated with the right answers
     let nameArr = [];
+    let correctIndex = [];//indexing the questions correct
+    let wrongIndex = []; //indexing the questions that were wrong
     let seconds = 60;
     let minutes = 1;
     let intervalId;
@@ -19,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(() => document.getElementById("TriviaWrapper").style.display = "block", 1000);
         setTimeout(() => document.getElementById("timer").style.visibility = "visible", 1000);
         setTimeout(() => document.getElementById("submit").style.display = "block", 1000);
-        setTimeout(() => document.getElementsByClassName("left")[0].style.display = "block", 1000);
-        setTimeout(() => document.getElementsByClassName("right")[0].style.display = "block", 1000);
+        // setTimeout(() => document.getElementsByClassName("left")[0].style.display = "block", 1000);
+        // setTimeout(() => document.getElementsByClassName("right")[0].style.display = "block", 1000);
     })
 
     submit.addEventListener('click', function(event) {
@@ -46,9 +48,24 @@ document.addEventListener("DOMContentLoaded", function() {
         for (let i = 0; i < answersArr.length; i++) {
             if (answerKey.indexOf(answersArr[i]) !== -1) {
                 correctAnswers++;
+                correctIndex.push(i+1);
+
+            }else{
+                wrongIndex.push(i+1);
             }
         }
         document.getElementById("timer").innerHTML = "You got " + correctAnswers + "/" + answerKey.length + " correct!";
+        var correct = document.getElementsByClassName("correct");
+        for(var j = 0; j < correctIndex.length; j++){
+            // console.log(correctIndex[j]);
+            var correctString = correctIndex[j].toString();
+            console.log(correctString);
+            document.getElementsByClassName(correctString)[0].style.backgroundColor = "#7FFF18";
+        }
+          for(var j = 0; j < wrongIndex.length; j++){
+            var wrongString = wrongIndex[j].toString();
+            document.getElementsByClassName(wrongString)[0].style.backgroundColor = "#F4A137";
+        }
     }
 
     function decrement() {
@@ -85,12 +102,22 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    document.getElementById('submit').addEventListener('click', function() {
+       window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }, false);
 
     document.getElementsByClassName('right')[0].addEventListener('click', function() {
-            $('#TriviaWrapper').animate( { scrollLeft: '+=650' }, 200)
+        $('#TriviaWrapper').animate({
+            scrollLeft: '+=650'
+        }, 200)
     }, false);
 
     document.getElementsByClassName('left')[0].addEventListener('click', function() {
-            $('#TriviaWrapper').animate( { scrollLeft: '-=650' }, 200)
+        $('#TriviaWrapper').animate({
+            scrollLeft: '-=650'
+        }, 200)
     }, false);
 });
